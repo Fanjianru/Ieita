@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵境时代</title>
+    <link rel="stylesheet" href="../jsrh/css/reset.css">
+    <link rel="stylesheet" href="../jsrh/css/index.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            list-style: none;
+        }
+        .a0 {
+            width: auto;
+            height: 100vh;
+            background-image: url(../jsrh/img/zero.png);
+            background-size: cover;
+            position: relative;
+            min-width: 1440px;
+        }
+        .bannerContent {
+            width: 1400px;
+            position: absolute;
+            top: 45%;
+            left:0;
+            right: 0;
+            margin: -170px auto 0;
+            text-align: left;
+        }
+        .head {
+            display: grid;
+            min-width: 1440px;
+            height: 61px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 10;
+            background-color: rgb(33, 150, 243);
+        }
+        
+        .to {
+            width: auto;
+            min-width: 1440px;
+            height: 61px;
+            margin: 0 auto;
+            background-color: rgb(33, 150, 243);
+        }
+
+        .floatBox:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+        }
+
+        .floatBox::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+        }
+        .tou {
+            width: 320px;
+            position: absolute;
+            padding-top: 3px;
+            height: 61px;
+            float: left;
+            margin: auto;
+            text-align: left;
+            overflow: hidden;
+        }
+        .tou img {
+            position: absolute;
+            display: block;
+            width: 218px;
+            height: 56px;
+            margin-left: 18px;
+            object-fit: cover;
+        }
+        .toRight {
+            width: 700px;
+            float: right;
+        }
+        .touLeft {
+            float:left;
+        }
+       
+        .tou1 {
+            font-size: 12px;
+            font-weight: 700;
+            text-align: left;
+            color: #ffffff;
+            line-height: 60px;
+            margin: 0 93px;
+        }
+        .an1 {
+            background-color: rgb(33, 150, 243);
+            padding-left: 253px;
+            padding-top: 15px;
+            width: 150px;
+            height: 55px;
+            border-radius: 15px;
+
+        }
+
+        .an12 {
+            width: 133px;
+            height: 24px;
+            background: #faec0a;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+            color: #0965eb;
+            line-height: 24px;
+        }
+
+        .bannerTitle {
+            font-size: 45px;
+            font-weight: 500;
+            color: aliceblue;
+            margin-top: 6px;
+        }
+        .bannerTitle p {
+            line-height: 63px;
+        }
+        .bannerEn {
+            font-size: 13px;
+            color: #ffffff;
+            line-height: 12.5px;
+            margin-top: 12px;
+        }
+
+        .btn {
+            display: block;
+            width: 144px;
+            height: 50px;
+            background: #faec0a;
+            border-radius: 6px;
+            margin: 4px;
+            font-size: 16.5px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 50px;
+            color: #0965eb;
+            margin-top: 48px;
+        }
+
+        .btn-text {
+            text-align: center;
+            line-height: 60px;
+
+        }
+
+        .btn:hover {
+            box-shadow: 1px 1px 25px 10px rgb(208, 238, 247);
+        }
+
+        .btn::before {
+            position: absolute;
+            background: linear-gradient(120deg, transparent, rgb(51, 255, 0));
+        }
+
+        .b {
+            width: auto;
+            height: 1018px;
+            min-width: 1440px;
+        }
+        .bboom{
+            height: 270px;
+            width: auto;
+        }
+        .viewBod {
+            width: 100%;
+            height: 488px;
+            min-height: 438px;
+            font-size: 38px;
+            font-weight: bold;
+            line-height: 53px;
+            letter-spacing: 3px;
+            margin: auto;
+            text-align: center;
+        }
+        .b1 {
+            width: 100%;
+            height: auto;
+            font-size: 35px;
+            font-family: PingFangSC-Semibold, sans-serif;
+            text-align: center;
+        }
+        .b2{
+            text-align: center;
+            margin: auto;
+        }
+        .b3 {
+            width: 333px;
+            height: 100px;
+            padding-top: 35px;
+            font-size: 35px;
+            text-align: center;
+            margin:auto;
+            font-size: 38px;
+            font-weight: bold;
+            line-height: 53px;
+            letter-spacing: 3px;
+            font-family: PingFangSC-Semibold, sans-serif;
+        }
+
+        .k {
+            padding-top: 50px;
+            padding-left: 700px;
+        }
+
+        .c {
+            height: 110px;
+            width: 100%;
+            min-width: 1440px;
+            margin: auto;
+            text-align: center;
+        }
+          .c1 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            min-width: 1440px;
+            height: 562px;
+        }
+
+        .c100 {
+            margin: auto;
+            width: 600px;
+            height: 338px;
+            text-align: center;
+        }
+
+        .c100 img {
+            display: block;
+            width: 600px;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .c11 {
+            line-height: 42px;
+            letter-spacing: 2.4px;
+            width: 668px;
+            height: 247px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .c111 {
+            width: 98px;
+            height: 42px;
+            margin: auto;
+            text-align: center;
+            
+        }
+        .c112{
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 23.25px;
+            letter-spacing: 1.5px;
+        }
+        .c2 {
+            width: 668px;
+            height: 247px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .c22 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            min-width:1440px;
+            height: 562px;
+            background-color: #f2f7fe;
+        }
+
+        .c222 {
+            font-size: 30px;
+            font-weight: regular;
+            letter-spacing: 2.4px;
+            line-height: 42px;
+        }
+        .c234{
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 23.25px;
+            letter-spacing: 1.5px;
+            margin-top: 26px;
+        }
+        .c23 {
+            margin: auto;
+            text-align: center;
+        }
+
+        .c23 img {
+            width: 600px;
+            height: 338px;
+            border-radius: 20px;
+        }
+
+        .c3 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            min-width: 1440px;
+            height: 562px;
+            background-color: #ffffff; 
+        }
+
+        .c300 {
+            width: 600px;
+            height: auto;
+            margin: auto;
+            text-align: center;
+
+        }
+        .c300 img{
+            border-radius: 20px;
+            height: 338px;
+            width: 600px;
+        }
+        .c33 {
+            width: 668px;
+            height: 247px;
+            text-align: center;
+            padding-top: 5px;
+            line-height: 42px;
+            letter-spacing:2.4px;
+            margin: auto;
+        }
+
+        .c333 {
+            padding-left: 45px;
+           
+        }
+
+        .c333 img {
+            border-radius: 15px;
+        }
+        .c334{
+            line-height: 23px;
+            letter-spacing:1.5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .o {
+            padding-left: 700px;
+            font-size: larger;
+        }
+
+        .n {
+            width: 1178px;
+            height: 48px;
+            background-color: white;
+            margin: 100px auto;
+        }
+
+        .n li {
+            margin-right: 20px;
+            background-color: #ffffff;
+            border: 1px solid;
+            border-radius: 10px;
+            float: left;
+            line-height: 48px;
+        }
+
+        .n a {
+            display: block;
+            text-decoration: none;
+            color: #16030c;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 0 49px;
+        }
+
+        .n a:hover {
+            background-color:rgb(34, 62, 219);
+            border-radius:10px ;
+            color: white;
+        }
+
+        .n li:last-child a {
+            padding: 0 42px 0 42px;
+        }
+
+        .bq {
+            width: 800px;
+            height: 115px;
+            font-size: 38;
+            font-weight:700px;
+            line-height: 53px;
+            letter-spacing: 3px;
+            margin-left: 317px;
+        }
+        .bq1{
+            font-size: 15px;
+            font-weight:600;
+            letter-spacing: 1.2px;
+            line-height: 21px;
+        }
+        .s {
+            padding-top: 20px;
+            padding-left: 50px;
+        }
+
+        .f {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            width: auto;
+            height: auto;
+            padding-top: 5px;
+        }
+    
+            .f1{
+                width: 522px;
+                height: 280px;
+                margin: auto;
+                text-align: center;   
+            }
+            .f2{
+                width: 254px;
+                height: 280px;
+                margin: auto;
+                text-align: center;  
+            }
+            .f3{
+                width: 522px;
+                height: 280px;
+                margin: auto;
+                text-align: center;
+            }
+        .f1 img {
+            width: 253px;
+            height: 280px;
+            border-radius: 20px;
+        }
+
+        .f2 img {
+            width: 253px;
+            height: 280px;
+            border-radius: 20px;
+        }
+
+        .f3 img {
+            width: 253px;
+            height: 280px;
+            border-radius: 20px;
+        }
+
+        .g {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            width: auto;
+            height: auto;
+            padding-top: 30px;
+        }
+        .g1{
+                width: 522px;
+                height: 280px;
+                margin: auto;
+                text-align: center;
+        }
+        .g2{
+                width: 254px;
+                height: 280px;
+                margin: auto;
+                text-align: center;
+            }
+        .g3{
+                width: 522px;
+                height: 280px;
+                margin: auto;
+                text-align: center;
+            }
+        .g1 img{
+            width: 253px;
+            height: 280px;
+            border-radius: 20px;
+        }
+
+        .g2 img {
+            width: 253px;
+            height: 280px;
+            border-radius: 20px;
+        }
+
+        .g3 img {
+            width: 253px;
+            height: 280px;
+            border-radius: 20px;
+        }
+
+        .z {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            width: auto;
+            height: 90px;
+            padding-top: 15px;
+        }
+        .z1{
+                width: 522px;
+                height: 90px;
+                margin: auto;
+                text-align: center;
+        }
+
+        .z2 {
+                width: 254px;
+                height: 90px;
+                margin: auto;
+                text-align: center;
+        }
+
+        .z3 {
+                width: 522px;
+                height: 90px;
+                margin: auto;
+                text-align: center;
+        }
+
+        .h {
+            height: 60px;
+            padding-left: 730px;
+            padding-top: 30px;
+        }
+
+        .x {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            width: auto;
+            height: auto;
+            padding-top: 10px;
+        }
+        .x1{
+            width: 522px;
+            height: 90px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .x2 {
+            width: 254px;
+            height: 90px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .x3 {
+            width: 522px;
+            height: 90px;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .btn02 {
+            display: block;
+            width: 144px;
+            height: 51px;
+            color: #ffffff;
+            background:linear-gradient(to right,#00C0FA,#025EEA);
+            font-weight: bold;
+            border-radius: 16px;
+            margin: auto;
+            font-size: 15px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .btn02:hover {
+            box-shadow: 1px 1px 25px 10px rgba(81, 235, 246, 0.522);
+        }
+        .btn02::before {
+            position: absolute;
+            background: linear-gradient(120deg, transparent, rgb(9, 15, 7));
+        }
+        .q0{
+            height: 400px;
+        }
+        .q1 {
+            width: 100%;
+            min-width: 1440px;
+            height: 81px;
+            font-size: 42px;
+            margin: auto;
+            text-align: center;
+            letter-spacing:3px;
+            line-height: 53px;
+            font-weight: Regular;
+        }
+        .btn03 {
+            display: block;
+            width: 144px;
+            height: 51px;
+            color: #ffffff;
+            background:linear-gradient(to right,#00C0FA,#025EEA);
+            font-weight: bold;
+            border-radius: 16px;
+            margin: auto;
+            font-size: 15px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .btn03:hover {
+            box-shadow: 1px 1px 25px 10px rgba(81, 235, 246, 0.522);
+        }
+        .btn03::before {
+            position: absolute;
+            background: linear-gradient(120deg, transparent, rgb(9, 15, 7));}
+        .q2 {
+            padding-left: 690px;
+            padding-top: 10px;
+            font-size: larger;
+            font-weight: 600;
+        }
+
+        .ll {
+            height: 900px;
+            margin: auto;
+            text-align:right
+
+        }
+
+        .l1 img {
+            width: 80%;
+            height: auto;
+        }
+
+        .last {
+            width: auto;
+            height: 300px;
+            background-color: white;
+            background-size: cover;
+            position: relative;
+        }
+
+        .last1 {
+           margin: auto;
+           text-align: center;
+           letter-spacing: 0;
+           line-height: 13px;
+        }
+    </style>
+  
+</head>
+
+<body>
+    <div class="head">
+        <div class="to floatBox">
+            <div class="tou"><img src="../jsrh/img/tuu.png"></div>
+            <div class="toRight floatBox">
+                <div class="tou1 touLeft">首页</div>
+                <div class="tou1 touLeft">下载</div>
+                <div class="tou1 touLeft">关于我们</div>
+            </div>
+        </div>
+    </div>
+    <div class="a0">
+        <div class="bannerContent">
+            <div class="an12">
+                <p>DREAM&nbspWORLD</p>
+            </div>
+            <h2 class="bannerTitle">
+                <p>你准备好了吗？</p>
+                <p>现在</p>
+                <p>一起进入灵境时代!</p>
+            </h2>
+            <h3 class="bannerEn">
+                The metaverse is a virtual world that is constructed by human beings using <br/>digital technology and can interact with the real world by mapping or <br/>surpassing the real world. It is a digital living space with a new social system.
+            </h3>
+            <div class="an">
+                <a href="#" class="btn">立即进入</a>
+            </div>    
+        </div>
+    </div>
+    <div class="b">
+        <div class="bboom">
+        </div>
+        <div class="viewBod">
+            <div class="b1">
+                打造全新的沉浸式体验
+             </div>
+            <div class="b2">
+                 <img src="../jsrh/img/img004.png">
+            </div>
+            <div class="b3">
+                元宇宙应用新时代
+            </div>
+        </div>
+    </div>
+    
+    <div class="c">
+            <p><span style="color:black;font-size:40px">虚幻</span>
+               <span style="color:#0965EB;font-size: 60px">，不虚幻</span></p>
+            <br>
+            <p><span style="font-size: 15px;font-weight: bold;line-height: 14px;letter-spacing: 0.8px;">我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。</span></p>
+    </div>
+    <div class="c1">
+        <div></div>
+                <div class="c100">
+                    <img src="../jsrh/img/bq0.jpg">
+                </div>
+                <div class="c11">
+                    <div class="c111">
+                        <p><span style="color:#0965EB;font-weight: regular;font-size: 30px;">虚拟人</span></p>
+                    </div>
+                    <div class="c112">
+                        <p><br></p>
+                        <p>我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境</p>
+                        <p>时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展</p>
+                        <p>让世界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们</p>
+                        <p>对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境时代</p>
+                        <p>中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世</p>
+                        <p>界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世</p>
+                        <p>界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。</p>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+            <div class="c22">
+                <div></div>
+                <div class="c2">
+                    <div class="c222">
+                        <p><span style="color:#0965EB;font-weight: regular;font-size: 30px;">元空间技术</span></p>
+                    </div>
+                    <div class="c234">
+                        <p>我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境</p>
+                        <p>时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展</p>
+                        <p>让世界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们</p>
+                        <p>对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境时代</p>
+                        <p>中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世</p>
+                        <p>界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世</p>
+                        <p>界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。</p>
+                    </div>
+                </div>
+                <div class="c23">
+                    <img src="../jsrh/img/bq1.jpg">
+                </div>
+                <div></div>
+            </div>
+            <div class="c3">
+                <div></div>
+                <div class="c300">
+                    <img src="../jsrh/img/bq2.jpg">
+                </div>
+                <div class="c33">
+                    <div class="c333">
+                        <p><span style="color:#0965EB;font-weight: regular;font-size: 30px;">NFR非同质化权益</span></p>
+                    </div>
+                    <div class="c334">
+                        <p><br></p>
+                        <p>我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境</p>
+                        <p>时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展</p>
+                        <p>让世界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们</p>
+                        <p>对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境时代</p>
+                        <p>中逐渐呈现，技术发展让世界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世</p>
+                        <p>界变的不再虚幻。我们对世界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。我们对世</p>
+                        <p>界的梦想，在灵境时代中逐渐呈现，技术发展让世界变的不再虚幻。</p>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+            <div class="bq">
+                <p><span style="font-size:35px;">元宇宙，现已应用于多个行业</span></p>
+                <div class="bq1">
+                <p>METAVERSE TECHNOLOGY IS NOW USED</p>
+                <p>MANY INDUSTRIES</p>
+            </div>
+            </div>
+            <div class="s">
+                <ul class="n">
+                    <li>
+                        <a href="#">文旅博览</a>
+                    </li>
+                    <li>
+                        <a href="#">工业制造</a>
+                    </li>
+                    <li>
+                        <a href="#">教育咨询</a>
+                    </li>
+                    <li>
+                        <a href="#">会展会议</a>
+                    </li>
+                    <li>
+                        <a href="#">历史重现</a>
+                    </li>
+                    <li>
+                        <a href="#">精密医疗</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="f">
+                <div class="f0"></div>
+                <div class="f1">
+                    <img src="../jsrh/img/bq3.jpg">
+                </div>
+                <div class="f2">
+                    <img src="../jsrh/img/bq3.jpg">
+                </div>
+                <div class="f3">
+                    <img src="../jsrh/img/bq3.jpg">
+                </div>
+                <div class="f00"></div>
+            </div>
+            <div class="z">
+                <div></div>
+                <div class="z1">
+                    <p><span style="color: black;font-size: 20px">元宇宙文案</span></p>
+                    <p><span style="color: rgb(34, 62, 219);font-size: 14px">#AR#VR#虚拟技术</span></p>
+                    </a>
+                </div>
+                <div class="z2">
+                    <p><span style="color:black;font-size: 20px">元宇宙文案</span></p>
+                    <p><span style="color: rgb(34, 62, 219);font-size: 14px">#AR#VR#虚拟技术</span></p>
+                </div>
+                <div class="z3">
+                    <p><span style="color:black;font-size: 20px">元宇宙文案</span></p>
+                    <p><span style="color: rgb(34, 62, 219);font-size: 14px">#AR#VR#虚拟技术</span></p>
+                </div>
+                <div></div>
+            </div>
+            <div class="g">
+                <div></div>
+                <div class="g1">
+                    <img src="../jsrh/img/bq3.jpg">
+                </div>
+                <div class="g2">
+                    <img src="../jsrh/img/bq3.jpg">
+                </div>
+                <div class="g3">
+                    <img src="../jsrh/img/bq3.jpg">
+                </div>
+                <div></div>
+            </div>
+            <div class="x">
+                <div></div>
+                <div class="x1">
+                    <p><span style="color:black;font-size: 20px">元宇宙文案</span></p>
+                    <p><span style="color: rgb(34, 62, 219);font-size: 14px">#AR#VR#虚拟技术</span></p>
+                </div>
+                <div class="x2">
+                    <p><span style="color:black;font-size: 20px">元宇宙文案</span></p>
+                    <p><span style="color: rgb(34, 62, 219);font-size: 14px">#AR#VR#虚拟技术</span></p>
+                </div>
+                <div class="x3">
+                    <p><span style="color:black;font-size: 20px">元宇宙文案</span></p>
+                    <p><span style="color: rgb(34, 62, 219);font-size: 14px">#AR#VR#虚拟技术</span></p>
+                </div>
+                <div></div>
+            </div>
+            <div class="an02">
+                <a href="#" class="btn02">了解更多</a>
+            </div> 
+            <div class="q0">
+            </div> 
+            <div class="q1">
+                <p><span style="color:black;font-size:40px">灵境时代，让世界增添一种新的可能</span></p>
+            </div>
+            <br><br><br><br><br><br><br>
+            <div class="an03">
+                <a href="#" class="btn03">联系我们</a>
+            </div>
+            <div class="ll">
+                <img src="../jsrh/img/img5.png">
+            </div>
+        </div>
+        <div class="last">
+            <div class="last1">
+                <p><span style="font-size: 9px;font-weight: bold;">晋公安ICP12378108981备 &nbsp &nbsp &nbsp
+                        &nbsp为了防范电信网络诈骗，如果接到4001314179来电，请立即接听 &nbsp &nbsp违法和不良信息举报电话：021-606554633 &nbsp
+                        &nbsp邮箱：service@ibaotu.com</span></p>
+            </div>
+
+        </div>
+</body>
+
+</html>

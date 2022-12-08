@@ -1,0 +1,13 @@
+.cleafix::before,
+.cleafix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+body{
+    min-width: 1280px;
+}
+.w{
+    width: 1280px;
+    margin: 0 auto;
+}

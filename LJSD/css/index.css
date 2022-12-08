@@ -1,0 +1,18 @@
+.header{
+    height: 100px;
+    background-color: rgb(33, 150,243);
+
+}
+.header .logo{
+    float:left ;
+    margin-top: 22px;
+}
+.header .logo a{
+    position: absolute;
+    display: block;
+    width: 75px;
+    height: 35px;
+    background-color: rgb(6, 25, 41);
+    background-image: url(../img/biaotou.jpg);
+    background-position: center;
+}
